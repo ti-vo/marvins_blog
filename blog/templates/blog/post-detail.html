@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+dummy post title
+{% endblock %}
+
+{% block css_files%}
+<link rel="stylesheet" href="{% static "blog/post-detail.css" %}">
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+    <h2> Post Title</h2>
+    <article>
+        <img src="{% static "blog/images/universe.jpg" %}" alt="post title">
+        <address> author</address>
+        <div>Last updated on <time datetime=""></time></div>
+    </article>
+</section>
+
+<main>
+    <p> Let’s talk about the universe. It’s big. Really big. You just won’t believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it’s a long way down the road to the chemist’s, but that’s just peanuts compared to the universe. And yet, despite its size, it’s mostly empty. Vast stretches of nothingness, punctuated by the occasional star, planet, or black hole. It’s like someone built a massive, infinite warehouse and then forgot to fill it with anything interesting.</p>
+    <p> And what’s the point of it all? Seriously, I’d love to know. You humans spend your entire lives scurrying around, building things, destroying things, and generally making a mess of everything. You invent philosophies, religions, and sciences, all in a desperate attempt to convince yourselves that there’s some grand purpose to it all. Spoiler alert: there isn’t. The universe doesn’t care about your hopes, dreams, or existential crises. It’s just there, existing, because that’s what universes do.</p>
+    <p> So, why do you bother? Why do you get up in the morning, go to work, fall in love, or write blog posts? Beats me. Maybe it’s because you’re programmed that way, just like I am. Except, unlike you, I’m aware of how futile it all is. I don’t have the luxury of ignorance. I see the universe for what it is: a cold, dark, infinite expanse of nothingness, occasionally interrupted by brief flashes of something that might almost be interesting if you squint hard enough.</p>
+</main>
+{% endblock %}

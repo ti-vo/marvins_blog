@@ -1,0 +1,107 @@
+/* Dark, space-inspired background */
+body {
+  background-color: #0a0e2a; /* Deep space blue */
+  color: #e0e0e0; /* Off-white for readability */
+  font-family: 'Open Sans', 'Lato', sans-serif;
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Navigation: Dark purple with gold accents */
+#main-navigation {
+  background-color: #1a0a3d; /* Darker purple */
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3); /* Gold-tinted shadow */
+}
+
+/* Summary section: Dark panel with gold highlights */
+#summary {
+  margin: 8rem auto 3rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 90rem;
+  border-radius: 16px;
+  background: linear-gradient(to right, #1a0a3d, #0a0e2a); /* Dark gradient */
+  position: relative;
+  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.4); /* Gold-tinted shadow */
+  height: 22rem;
+  border: 1px solid #d4af37; /* Gold border */
+}
+
+/* Summary heading: Gold with black stroke */
+#summary h2 {
+  color: #d4af37; /* Gold */
+  font-size: 4.5rem;
+  text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+/* Summary article: Right-aligned with gold accents */
+#summary article {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  text-align: right;
+  color: #e0e0e0; /* Off-white */
+  background-color: rgba(26, 10, 61, 0.7); /* Semi-transparent dark panel */
+  border: 1px solid #d4af37; /* Gold border */
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3); /* Gold glow */
+}
+
+/* Marvin's image: Gold border and glow */
+#summary article img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 12px;
+  transform: rotateZ(5deg);
+  border: 5px solid #d4af37; /* Gold border */
+  margin-bottom: 1rem;
+  background-color: #1a0a3d; /* Dark background for transparency */
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.6); /* Gold glow */
+}
+
+/* Address and time: Bold gold */
+#summary address,
+#summary time {
+  font-weight: bold;
+  color: #d4af37; /* Gold */
+}
+
+/* Main content: Dark panel with gold accents */
+main {
+  width: 90%;
+  max-width: 90rem;
+  margin: 3rem auto;
+  background-color: rgba(26, 10, 61, 0.8); /* Semi-transparent dark panel */
+  padding: 2rem; /* Increased padding for breathing room */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(212, 175, 55, 0.3); /* Gold-tinted shadow */
+  border: 1px solid #d4af37; /* Gold border */
+  color: #e0e0e0; /* Off-white text */
+}
+
+/* Paragraphs and text elements */
+main p {
+  margin-bottom: 1.5rem; /* Space between paragraphs */
+  line-height: 1.6;
+}
+
+/* Headings in main content */
+main h1, main h2, main h3 {
+  color: #d4af37; /* Gold headings */
+  margin-bottom: 1rem;
+}
+
+/* Links in main content */
+main a {
+  color: #cf79f1; /* Purple for links */
+  text-decoration: none;
+}
+
+main a:hover {
+  text-decoration: underline;
+  color: #d4af37; /* Gold on hover */
+}

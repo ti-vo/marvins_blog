@@ -1,0 +1,62 @@
+#about p {
+  font-size: 1.5rem;
+  color: #e0e0e0; /* Off-white for readability */
+}
+
+/* Grid layout for posts */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* Post images: Gold border and dark background */
+.post img {
+  width: 7rem;
+  height: 7rem;
+  object-fit: cover;
+  border: 2px solid #d4af37; /* Gold border */
+  border-radius: 8px;
+  background-color: #1a0a3d; /* Dark background for transparency */
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.4); /* Gold glow */
+}
+
+/* Post links: Dark panels with gold accents */
+.post a {
+  height: 22rem;
+  transform-origin: center;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3); /* Gold-tinted shadow */
+  border-radius: 12px;
+  background-color: rgba(26, 10, 61, 0.8); /* Semi-transparent dark panel */
+  border: 1px solid #d4af37; /* Gold border */
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  color: #e0e0e0; /* Off-white text */
+  padding: 1.5rem;
+}
+
+/* Hover effect for posts */
+.post a:hover {
+  transform: scale(1.02); /* Slightly enlarge on hover */
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5); /* Brighter gold glow */
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly less transparent */
+}
+
+/* Post content styling */
+.post__content {
+  padding: 1rem;
+  color: #e0e0e0; /* Off-white text */
+}
+
+.post h3 {
+  color: #d4af37; /* Gold heading */
+  margin-top: 0.5rem;
+}
+
+.post p {
+  color: #b0b0b0; /* Lighter gray for subtlety */
+  font-size: 0.9rem;
+}

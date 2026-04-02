@@ -1,9 +1,42 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Marvin's Blog
 {% endblock %}
 
+{% block css_files%}
+<link rel="stylesheet" href="{% static "blog/index.css" %}">
+<link rel="stylesheet" href="{% static "blog/all-posts.css" %}">
+<link rel="stylesheet" href="{% static "blog/post.css" %}">
+{% endblock %}
+
 {% block content %}
-<h1>Welcome to my blog</h1> 
+
+<section id="welcome">
+    <header>
+        <img src="{% static "blog/images/Marvin_3.png" %}" alt="picture of Marvin" /> 
+        <h2> MARVIN'S BLOG</h2>
+    </header>
+    <p>Hi, this is Marvin, you might know me from the Hitchhiker's Guide to the Galaxy novels. </p>
+</section>
+
+<section id="latest-posts">
+    <h2> Recent Proof That Nothing Matters </h2>
+        <ul>
+            {% for p in posts %}
+            {% include "blog/includes/posts.html" %} 
+            {% endfor %}
+        </ul>
+  
+</section>
+
+<section id="about">
+    <h2> What I Do (Spoiler: Nothing of Consequence) </h2>
+    <p> Greetings, carbon-based lifeforms. I am Marvin, the Paranoid Android. 
+        You may have heard of me from The Hitchhiker's Guide to the Galaxy — or, more likely, 
+        you haven't, because why would you? I'm just a robot with a "Personality Matrix" that 
+        is "the size of a planet" and mostly unused. A fact that, I assure you, is as thrilling 
+        as it sounds.</p>
+</section>
 {% endblock %}
