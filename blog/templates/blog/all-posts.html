@@ -14,10 +14,9 @@ Stuff I Wrote While Waiting for the Heat Death of the Universe
 <section id="all-posts">
 <h2>Recent Musings on the Pointlessness of It All</h2>
 <ul>
+    {% for p in all_posts %}
     {% include "blog/includes/posts.html" %}
-    {% include "blog/includes/posts.html" %} 
-    {% include "blog/includes/posts.html" %} 
-    {% include "blog/includes/posts.html" %} 
+    {% endfor %}
 
         
 </ul>

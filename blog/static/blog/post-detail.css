@@ -29,14 +29,17 @@ body {
 /* Summary heading: Gold with black stroke */
 #summary h2 {
   color: #d4af37; /* Gold */
-  font-size: 4.5rem;
+  font-size: 4rem;
   text-shadow:
     -2px -2px 0 #000,
     2px -2px 0 #000,
     -2px 2px 0 #000,
     2px 2px 0 #000;
+  margin: 0; /* Remove default margins */
+  padding: 0 1rem; /* Add some padding to prevent edge touching */
+  z-index: 2; /* Ensure the headline stays above other elements */
+  max-width: 78%; /* Limit width to prevent overlap */
 }
-
 /* Summary article: Right-aligned with gold accents */
 #summary article {
   position: absolute;
@@ -104,4 +107,33 @@ main a {
 main a:hover {
   text-decoration: underline;
   color: #d4af37; /* Gold on hover */
+}
+
+/* Tags section: Gold-accented pills below the summary title */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  gap: 0.5rem; /* Space between tags */
+  margin: 1rem 0 0 1rem; /* Position below the h2 */
+  padding: 0;
+  z-index: 2; /* Ensure tags stay above other elements */
+}
+
+.tag {
+  background-color: rgba(26, 10, 61, 0.7); /* Semi-transparent dark panel */
+  color: #d4af37; /* Gold text */
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px; /* Pill shape */
+  border: 1px solid #d4af37; /* Gold border */
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(212, 175, 55, 0.3); /* Subtle gold glow */
+  transition: all 0.2s ease; /* Smooth hover effect */
+}
+
+.tag:hover {
+  background-color: rgba(212, 175, 55, 0.3); /* Light gold hover */
+  color: #0a0e2a; /* Dark text on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
