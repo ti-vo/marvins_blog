@@ -19,7 +19,8 @@ class Tag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=150)
     excerpt = models.CharField(max_length=250)
-    image_name = models.CharField(max_length=100)
+    #image_name = models.CharField(max_length=100)
+    image = models.ImageField(upload_to="posts") # if no image is provided, save "null"
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True) 
     # unique identifier, Django and SQL should check for this, 

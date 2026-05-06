@@ -1,8 +1,7 @@
-{% load static %}
 <li>
                 <article class="post">
                     <a href={% url "post-detail-page" slug=p.slug %}>
-                        <img src="{% static "blog/images/"|add:p.image_name" %}" alt="{{p.title}}">
+                        <img src="{{ p.image.url }}" alt="{{p.title}}">
                         <div class="post__content">
                         </div>
                         <h3> {{ p.title }} </h3>
