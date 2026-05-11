@@ -20,7 +20,7 @@ class Post(models.Model):
     title = models.CharField(max_length=150)
     excerpt = models.CharField(max_length=250)
     #image_name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="posts") # if no image is provided, save "null"
+    image = models.ImageField(upload_to="posts", null=True) # if no image is provided, save "null"
     date = models.DateField(auto_now=True)
     slug = models.SlugField(unique=True) 
     # unique identifier, Django and SQL should check for this, 
@@ -35,3 +35,15 @@ class Post(models.Model):
 
 # author: name
 # tag: caption
+
+class Comment(models.Model):
+    """ comment model; one-to-many relation to post model, one comment belongs to one post
+
+    Args:
+        models (_type_): _description_
+    """
+    user_name = models.CharField(max_length=100)
+    user_email = models.EmailField()
+    text = models.TextField(max_length=500)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments") #if post is deleted, delete also the comments
+

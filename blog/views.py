@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from typing import List
 from django.views.generic import ListView, DetailView
 from .models import Post
-
+from .forms import CommentForm
 
 
 # Create your views here.
@@ -51,9 +51,11 @@ class SinglePostView(DetailView):
     # will automatically search by slug!
 
     def get_context_data(self, **kwargs):
-        """overwrite to show tags""" 
+        """overwrite to show tags and add comment form""" 
         context_data = super().get_context_data(**kwargs)
         context_data["post_tags"] = self.object.tags.all()
+        context_data["comment_form"] = CommentForm()
+
         return context_data
        
 
